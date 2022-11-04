@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/materi"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Materi" />
+
+    <item
+        android:id="@+id/kelas"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="Class" />
+
+    <item
+        android:id="@+id/quiz"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="quiz" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="profile" />
+
+</menu>
