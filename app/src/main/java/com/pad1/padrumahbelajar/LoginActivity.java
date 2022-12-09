@@ -14,13 +14,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.pad1.padrumahbelajar.databinding.ActivityMainBinding;
+import com.pad1.padrumahbelajar.model.KelasData;
+import com.pad1.padrumahbelajar.model.KelasResponse;
 import com.pad1.padrumahbelajar.tutorial.TutorialActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -28,13 +32,15 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
+    public boolean isLogin;
     EditText editTextUsrnm;
     EditText editTextPw;
     Context mContext;
     BaseApiService mApiService;
     ProgressDialog loading;
     TextView textViewSignup;
-    SharedPrefManager sharedPrefManager;
+    TextView textViewLogin;
+    public static SharedPrefManager sharedPrefManager;
 
 
 
@@ -43,8 +49,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         setContentView(R.layout.activity_login);
         mApiService = UtilsApi.getAPIService();
+        textViewLogin = findViewById(R.id.textViewlgn);
 
         editTextPw = findViewById(R.id.editTextPw);
         editTextUsrnm = findViewById(R.id.editTextUsrnm);
@@ -58,6 +66,40 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
+
+        mApiService.kelasRequest()
+                .enqueue(new Callback<KelasResponse>() {
+                    @Override
+                    public void onResponse(Call<KelasResponse> call, Response<KelasResponse> response) {
+                        if (response.isSuccessful()) {
+//                            loading.dismiss();
+                            KelasResponse kelasResponse = response.body();
+                            ArrayList<KelasData> kelasData = kelasResponse.getData();
+                            Log.e("getSuccess", "onFailure: ERROR > " + kelasResponse.getStatus().toString());
+//                            for (int i = 0; i<kelasData.size();i++){
+                                String Kelas = kelasData.get(0).getNama_kelas().toString();
+                               Log.d("getsucces",Kelas);
+                                textViewLogin.setText(Kelas);
+//                            }
+
+
+//                            Toast.makeText(mContext, kelasResponse.getStatus(), Toast.LENGTH_SHORT).show();
+                        } else {
+//                            loading.dismiss();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<KelasResponse> call, Throwable t) {
+                        Log.e("debug", "onFailure: ERROR > " + t.toString());
+//                        Toast.makeText(mContext,"FAIL", Toast.LENGTH_SHORT).show();
+                        loading.dismiss();
+                    }
+                });
+
 
         if (sharedPrefManager.getSPSudahLogin()){
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
@@ -141,9 +183,13 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
                         Log.e("debug", "onFailure: ERROR > " + t.toString());
-                        loading.dismiss();
+//                        loading.dismiss();
                     }
                 });
+
+    }
+    public static void logout(){
+        sharedPrefManager.saveSPBoolean(SharedPrefManager.SP_SUDAH_LOGIN,false);
 
     }
 

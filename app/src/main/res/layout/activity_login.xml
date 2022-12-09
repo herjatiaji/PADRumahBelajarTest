@@ -36,6 +36,7 @@
     <EditText
         android:id="@+id/editTextUsrnm"
         android:layout_width="311dp"
+        android:textColor="@color/biru_tua3"
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="60dp"
@@ -52,6 +53,7 @@
     <EditText
         android:id="@+id/editTextPw"
         android:layout_width="311dp"
+        android:textColor="@color/biru_tua3"
         android:layout_height="49dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
@@ -122,7 +124,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:onClick="signUp"
             android:fontFamily="@font/poppins_medium"
             android:text="Sign Up"
             android:textColor="@color/biru_tua3" />

@@ -4,7 +4,7 @@
     package="com.pad1.padrumahbelajar">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,17 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PADRumahBelajar"
         tools:targetApi="31">
-        <activity
-            android:name=".QuizActivity"
-            android:exported="false" />
-        <activity
-            android:name=".lessonActivty"
-            android:exported="false" />
+
         <activity
             android:name=".tutorial.TutorialActivity3"
             android:exported="false"
             android:label="@string/title_activity_tutorial3"
-            android:theme="@style/Theme.PADRumahBelajar.NoActionBar" />
+            android:theme="@style/Theme.PADRumahBelajar.NoActionBar"
+            android:parentActivityName=".LoginActivity"/>
         <activity
             android:name=".tutorial.TutorialActivity2"
             android:exported="false" />
@@ -40,7 +36,8 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".LoginActivity"/>
         <activity
             android:name=".LoginActivity"
             android:exported="true">

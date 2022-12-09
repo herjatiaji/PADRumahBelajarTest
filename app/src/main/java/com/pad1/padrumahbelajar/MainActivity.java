@@ -20,11 +20,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.pad1.padrumahbelajar.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-    FloatingActionButton fab, fabAddClass;
-    Animation fabOpen, fabClose, rotateForward, rotateBackward;
-
-
-    boolean isOpen = false;
+//    FloatingActionButton fab, fabAddClass;
+//    Animation fabOpen, fabClose, rotateForward, rotateBackward;
+//
+//
+//    boolean isOpen = false;
     ActivityMainBinding binding;
 
     @Override
@@ -34,29 +34,29 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         replaceFragment(new HomeFragment());
 
-        fab = findViewById(R.id.fab);
-        fabAddClass = findViewById(R.id.fabAddClass);
-
-        fabOpen = AnimationUtils.loadAnimation(this,R.anim.tab_open);
-        fabClose = AnimationUtils.loadAnimation(this,R.anim.tab_close);
-
-        rotateForward = AnimationUtils.loadAnimation(this,R.anim.rotate_forward);
-        rotateBackward = AnimationUtils.loadAnimation(this,R.anim.rotate_backward);
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                animateFab();
-
-            }
-        });
-        fabAddClass.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"CLICKED!!",Toast.LENGTH_SHORT).show();
-            }
-        });
-
+//        fab = findViewById(R.id.fab);
+//        fabAddClass = findViewById(R.id.fabAddClass);
+//
+//        fabOpen = AnimationUtils.loadAnimation(this,R.anim.tab_open);
+//        fabClose = AnimationUtils.loadAnimation(this,R.anim.tab_close);
+//
+//        rotateForward = AnimationUtils.loadAnimation(this,R.anim.rotate_forward);
+//        rotateBackward = AnimationUtils.loadAnimation(this,R.anim.rotate_backward);
+//
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                animateFab();
+//
+//            }
+//        });
+//        fabAddClass.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(MainActivity.this,"CLICKED!!",Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
         binding.bottomNavigationView.setOnItemSelectedListener(item ->{
             switch (item.getItemId()){
                 case R.id.materi:
@@ -77,31 +77,31 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu){
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.bottom_nav_menu, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item){
-//        switch (item.getItemId()){
-//            case R.id.materi:
-//                replaceFragment(new HomeFragment());
-//                break;
-//            case R.id.kelas:
-//                Intent intent = new Intent(this, ClassFragment.class);
-//                startActivity(intent);
-//            case R.id.quiz:
-//                replaceFragment(new QuizFragment());
-//                break;
-//            case R.id.profile:
-//                replaceFragment(new ProfileFragment());
-//                break;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.bottom_nav_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.materi:
+                replaceFragment(new HomeFragment());
+                break;
+            case R.id.kelas:
+                replaceFragment(new ClassFragment());
+                break;
+            case R.id.quiz:
+                replaceFragment(new QuizFragment());
+                break;
+            case R.id.profile:
+                replaceFragment(new ProfileFragment());
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -111,21 +111,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void animateFab(){
-        if(isOpen){
-            fab.startAnimation(rotateBackward);
-            fabAddClass.startAnimation(fabClose);
-            fabAddClass.setClickable(false);
-            isOpen = false;
-
-        }
-        else{
-            fab.startAnimation(rotateForward);
-            fabAddClass.startAnimation(fabOpen);
-            fabAddClass.setClickable(true);
-            isOpen = true;
-        }
-    }
+//    private void animateFab(){
+//        if(isOpen){
+//            fab.startAnimation(rotateBackward);
+//            fabAddClass.startAnimation(fabClose);
+//            fabAddClass.setClickable(false);
+//            isOpen = false;
+//
+//        }
+//        else{
+//            fab.startAnimation(rotateForward);
+//            fabAddClass.startAnimation(fabOpen);
+//            fabAddClass.setClickable(true);
+//            isOpen = true;
+//        }
+//    }
 
 
 

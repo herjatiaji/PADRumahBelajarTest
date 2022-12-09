@@ -19,12 +19,16 @@ public class TutorialActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tutorial);
 
         buttonGetstrt = findViewById(R.id.buttonGetstrt);
+
+        buttonGetstrt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TutorialActivity.this, TutorialActivity2.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    private void pindah(){
-        Intent intent = new Intent(TutorialActivity.this, TutorialActivity2.class);
-        startActivity(intent);
-    }
 
 
 }

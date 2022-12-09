@@ -14,11 +14,15 @@ public class TutorialActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial2);
+
+        findViewById(R.id.buttonGetstrt).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TutorialActivity2.this, TutorialActivity3.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    private void pindah(){
-        Intent intent = new Intent( TutorialActivity2.this, TutorialActivity3.class);
-        startActivity(intent);
-    }
 
 }

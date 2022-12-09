@@ -14,7 +14,7 @@
         android:background="@drawable/custom_button"
         android:padding="10dp"
         android:text="Get Started"
-        android:onClick="pindah"
+
         android:textColor="@color/white"
         android:fontFamily="@font/dm_sans_medium"
         android:theme="@style/Button.Teal"

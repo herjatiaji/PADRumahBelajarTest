@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="30dp"
-    app:cardElevation="20dp"
+
     app:cardUseCompatPadding="true"
-    app:cardBackgroundColor="@color/biru_tua2">
+    app:cardBackgroundColor="@color/white">
 
     <LinearLayout
         android:layout_width="361dp"
         android:layout_height="100dp"
-        android:layout_margin="5dp"
+
         android:orientation="horizontal"
         android:padding="10dp">
 
-        <ImageView
-            android:id="@+id/newsPic"
-            android:layout_width="wrap_content"
-            android:layout_height="73dp"
-            android:layout_margin="5dp"
-            android:src="@drawable/ic_launcher_background" />
+
 
         <LinearLayout
             android:layout_width="232dp"
@@ -31,11 +27,12 @@
                 android:id="@+id/tvMapel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:fontFamily="@font/poppins_medium"
                 android:paddingLeft="10dp"
                 android:text="Nama Mapel"
-                android:textColor="@color/white"
-                android:textSize="15dp"
+                android:textColor="@color/biru_tua2"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -45,6 +42,7 @@
                 android:fontFamily="@font/poppins_medium"
                 android:paddingLeft="10dp"
                 android:text="Keterangan"
+                android:textColor="@color/biru_tua2"
                 android:textSize="15dp" />
 
 
