@@ -27,7 +27,6 @@
 
         <TextView
             android:id="@+id/tv1"
-            style="@style/titleTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -210,7 +209,7 @@
 
             <RadioButton
                 android:id="@+id/radioButton1"
-                style="@style/text_radio_button_answer"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -218,7 +217,8 @@
 
             <RadioButton
                 android:id="@+id/radioButton2"
-                style="@style/text_radio_button_answer"
+
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -227,7 +227,8 @@
 
             <RadioButton
                 android:id="@+id/radioButton3"
-                style="@style/text_radio_button_answer"
+
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -235,7 +236,8 @@
 
             <RadioButton
                 android:id="@+id/radioButton4"
-                style="@style/text_radio_button_answer"
+
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -243,7 +245,8 @@
 
             <RadioButton
                 android:id="@+id/radioButton5"
-                style="@style/text_radio_button_answer"
+
+
                 android:layout_width="match_parent"
                 android:layout_marginStart="8dp"
                 android:layout_height="wrap_content"
@@ -258,7 +261,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnNextQuestionLiteratureAndGeography"
-        style="@style/btnStyle"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

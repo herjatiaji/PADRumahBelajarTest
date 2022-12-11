@@ -31,7 +31,7 @@
 
             <TextView
                 android:id="@+id/textView26"
-                style="@style/titleTextStyle"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -58,17 +58,17 @@
                 tools:text="Manakah jawaban yang benar?" />
 
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnNextQuestionLiteratureAndGeography"
-                style="@style/btnStyle"
-                android:layout_width="0dp"
-                android:layout_marginBottom="40dp"
-                android:imeOptions="actionDone"
-                android:singleLine="true"
-                android:text="Next"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/textView78"
-                app:layout_constraintStart_toStartOf="@+id/textView78" />
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/btnNextQuestionLiteratureAndGeography"-->
+<!--                style="@style/btnStyle"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_marginBottom="40dp"-->
+<!--                android:imeOptions="actionDone"-->
+<!--                android:singleLine="true"-->
+<!--                android:text="Next"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/textView78"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/textView78" />-->
 
             <RadioGroup
                 android:id="@+id/radioGroup"
@@ -83,14 +83,14 @@
 
                 <RadioButton
                     android:id="@+id/radioButton1"
-                    style="@style/text_radio_button_answer"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="Jawaban A" />
 
                 <RadioButton
                     android:id="@+id/radioButton2"
-                    style="@style/text_radio_button_answer"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="Jawaban B" />
@@ -98,21 +98,21 @@
 
                 <RadioButton
                     android:id="@+id/radioButton3"
-                    style="@style/text_radio_button_answer"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="Jawaban C" />
 
                 <RadioButton
                     android:id="@+id/radioButton4"
-                    style="@style/text_radio_button_answer"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="Jawaban D" />
 
                 <RadioButton
                     android:id="@+id/radioButton5"
-                    style="@style/text_radio_button_answer"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="Jawaban E" />
@@ -129,7 +129,7 @@
                 android:textColor="@color/black"
                 android:textSize="26sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/btnNextQuestionLiteratureAndGeography"
+
                 app:layout_constraintEnd_toEndOf="@+id/radioGroup"
                 app:layout_constraintStart_toStartOf="@+id/radioGroup"
                 app:layout_constraintTop_toBottomOf="@+id/radioGroup"
