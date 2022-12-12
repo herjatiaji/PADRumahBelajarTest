@@ -1,5 +1,6 @@
 package com.pad1.padrumahbelajar;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.pad1.padrumahbelajar.databinding.ActivityMainBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +28,11 @@ public class QuizFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    FloatingActionButton fab, fabAddClass;
+    Animation fabOpen, fabClose, rotateForward, rotateBackward;
+
+    boolean isOpen = false;
+    ActivityMainBinding binding;
 
     public QuizFragment() {
         // Required empty public constructor
@@ -44,10 +54,19 @@ public class QuizFragment extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+
+
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        FloatingActionButton fab, fabAddClass;
+        Animation fabOpen, fabClose, rotateForward, rotateBackward;
+
+
+        boolean isOpen = false;
+        ActivityMainBinding binding;
+
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
@@ -58,7 +77,22 @@ public class QuizFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_quiz, container, false);
+        View view = inflater.inflate(R.layout.fragment_quiz, container, false);
+        fab = view.findViewById(R.id.fab);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (getContext(), AddLabelQuiz.class);
+                startActivity(intent);
+//                startActivity(new Intent(QuizFragment.this, QuestionActivity.class));
+            }
+        });
+
+        return view;
     }
 }

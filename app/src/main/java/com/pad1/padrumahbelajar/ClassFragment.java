@@ -108,41 +108,41 @@ public class ClassFragment extends Fragment {
         rotateForward = AnimationUtils.loadAnimation(getContext(),R.anim.rotate_forward);
         rotateBackward = AnimationUtils.loadAnimation(getContext(),R.anim.rotate_backward);
 
-        mApiService.kelasRequest()
-                .enqueue(new Callback<KelasResponse>() {
-                    @Override
-                    public void onResponse(Call<KelasResponse> call, Response<KelasResponse> response) {
-                        if (response.isSuccessful()) {
-//                            loading.dismiss();
-                            KelasResponse kelasResponse = response.body();
-                            ArrayList<KelasData> kelasData = kelasResponse.getData();
-                            List<KelasData> listKelas = new ArrayList<>();
-                            Log.e("getSuccess", "onFailure: ERROR > " + kelasResponse.getStatus().toString());
-                            for (int i = 0; i<kelasData.size();i++){
-                                KelasData kelass = kelasData.get(i);
-                                listKelas.add(kelass);
-
-                            }
-                            String Kelas = kelasData.get(0).getNama_kelas().toString();
-                            Log.d("getsucces",Kelas);
+//        mApiService.kelasRequest()
+//                .enqueue(new Callback<KelasResponse>() {
+//                    @Override
+//                    public void onResponse(Call<KelasResponse> call, Response<KelasResponse> response) {
+//                        if (response.isSuccessful()) {
+////                            loading.dismiss();
+//                            KelasResponse kelasResponse = response.body();
+//                            ArrayList<KelasData> kelasData = kelasResponse.getData();
+//                            List<KelasData> listKelas = new ArrayList<>();
+//                            Log.e("getSuccess", "onFailure: ERROR > " + kelasResponse.getStatus().toString());
+//                            for (int i = 0; i<kelasData.size();i++){
+//                                KelasData kelass = kelasData.get(i);
+//                                listKelas.add(kelass);
+//
 //                            }
-                            kelasAdapter = new KelasAdapter(listKelas);
-
-
-//                            Toast.makeText(mContext, kelasResponse.getStatus(), Toast.LENGTH_SHORT).show();
-                        } else {
-//                            loading.dismiss();
-                        }
-
-
-                    }
-
-                    @Override
-                    public void onFailure(Call<KelasResponse> call, Throwable t) {
-                        Log.e("debug", "onFailure: ERROR > " + t.toString());
-//                        Toast.makeText(mContext,"FAIL", Toast.LENGTH_SHORT).show();
-                    }
-                });
+//                            String Kelas = kelasData.get(0).getNama_kelas().toString();
+//                            Log.d("getsucces",Kelas);
+////                            }
+//                            kelasAdapter = new KelasAdapter(listKelas);
+//
+//
+////                            Toast.makeText(mContext, kelasResponse.getStatus(), Toast.LENGTH_SHORT).show();
+//                        } else {
+////                            loading.dismiss();
+//                        }
+//
+//
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<KelasResponse> call, Throwable t) {
+//                        Log.e("debug", "onFailure: ERROR > " + t.toString());
+////                        Toast.makeText(mContext,"FAIL", Toast.LENGTH_SHORT).show();
+//                    }
+//                });
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -40,12 +40,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
             android:layout_marginEnd="24dp"
             android:textAlignment="center"
             android:textColor="#1782BC"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv1"
             tools:text="soal" />
@@ -58,13 +58,14 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="24dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.33"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv2">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tiet1"
+                android:id="@+id/etSoal"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:hint="masukkan soal"
                 android:imeOptions="actionNext"
                 android:inputType="textPassword"
@@ -76,7 +77,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
             android:textAlignment="center"
             android:textColor="#1782BC"
@@ -197,7 +197,7 @@
 
 
         <RadioGroup
-            android:id="@+id/radioGroup"
+            android:id="@+id/radioGroupJawab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -208,7 +208,7 @@
             app:layout_constraintTop_toBottomOf="@+id/etE">
 
             <RadioButton
-                android:id="@+id/radioButton1"
+                android:id="@+id/radioButtonA"
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -216,7 +216,7 @@
                 tools:text="A" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/radioButtonB"
 
 
                 android:layout_width="match_parent"
@@ -226,7 +226,7 @@
 
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/radioButtonC"
 
 
                 android:layout_width="match_parent"
@@ -235,7 +235,7 @@
                 tools:text="C" />
 
             <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/radioButtonD"
 
 
                 android:layout_width="match_parent"
@@ -244,7 +244,7 @@
                 tools:text="D" />
 
             <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/radioButtonE"
 
 
                 android:layout_width="match_parent"
@@ -255,23 +255,22 @@
 
         </RadioGroup>
 
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:text="Tambah"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupJawab" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnNextQuestionLiteratureAndGeography"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
-        android:imeOptions="actionDone"
-        android:singleLine="true"
-        android:text="Tambah"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

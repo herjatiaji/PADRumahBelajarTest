@@ -20,11 +20,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.pad1.padrumahbelajar.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
-//    FloatingActionButton fab, fabAddClass;
-//    Animation fabOpen, fabClose, rotateForward, rotateBackward;
-//
-//
-//    boolean isOpen = false;
+    FloatingActionButton fab, fabAddClass;
+    Animation fabOpen, fabClose, rotateForward, rotateBackward;
+
+
+    boolean isOpen = false;
     ActivityMainBinding binding;
 
     @Override
@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         replaceFragment(new HomeFragment());
-
-//        fab = findViewById(R.id.fab);
+//
+        fab = findViewById(R.id.fab);
 //        fabAddClass = findViewById(R.id.fabAddClass);
 //
 //        fabOpen = AnimationUtils.loadAnimation(this,R.anim.tab_open);
@@ -56,7 +56,15 @@ public class MainActivity extends AppCompatActivity {
 //                Toast.makeText(MainActivity.this,"CLICKED!!",Toast.LENGTH_SHORT).show();
 //            }
 //        });
-//
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =  new Intent(MainActivity.this, QuestionActivity.class);
+                startActivity(intent);
+            }
+        });
+
         binding.bottomNavigationView.setOnItemSelectedListener(item ->{
             switch (item.getItemId()){
                 case R.id.materi:

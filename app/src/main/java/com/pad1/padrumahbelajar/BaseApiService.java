@@ -2,6 +2,8 @@ package com.pad1.padrumahbelajar;
 
 import com.pad1.padrumahbelajar.model.KelasResponse;
 
+import java.util.ArrayList;
+
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -24,6 +26,13 @@ public interface BaseApiService {
     @GET("guru/kelas/getall")
     Call<KelasResponse> kelasRequest();
 
+    @FormUrlEncoded
+    @POST("guru/quiz/addquiz")
+    Call<ResponseBody> quizRequest(@Field("namaQuiz") String namaQuiz, @Field("mataPelajaran") String mataPelajaran);
 
+    @FormUrlEncoded
+    @POST("guru/question/addquestion")
+    Call<ResponseBody> questionRequest(@Field("token") String token,@Field("question") String question, @Field("a") String a, @Field("b") String b, @Field("c") String c,
+                                       @Field("d") String d, @Field("e") String e, @Field("jawaban") String jawaban);
 
 }
