@@ -1,9 +1,10 @@
 package com.pad1.padrumahbelajar.model;
+import com.google.gson.annotations.SerializedName;
 
 public class KelasData {
+
+    @SerializedName("token")
     private String token;
-    private String ikon;
-    private String nama_kelas;
 
     public String getToken() {
         return token;
@@ -21,11 +22,17 @@ public class KelasData {
         this.ikon = ikon;
     }
 
-    public String getNama_kelas() {
-        return nama_kelas;
+    public String getNamaKelas() {
+        return namaKelas;
     }
 
-    public void setNama_kelas(String nama_kelas) {
-        this.nama_kelas = nama_kelas;
+    public void setNamaKelas(String namaKelas) {
+        this.namaKelas = namaKelas;
     }
+
+    @SerializedName("ikon")
+    private String ikon;
+
+    @SerializedName("nama_kelas")
+    private String namaKelas;
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/header_bg"
-    tools:context=".LabelQuizActivity">
+    tools:context=".quiz.LabelQuizActivity">
 
     <ImageView
         android:id="@+id/imageViewQuizOption"
@@ -66,7 +66,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:listitem="@layout/list_quiz" />
+            tools:listitem="@layout/item_label_quiz" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"

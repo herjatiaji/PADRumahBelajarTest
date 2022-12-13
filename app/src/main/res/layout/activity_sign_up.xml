@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".login.LoginActivity">
 
 
 
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Sign Up"
-        android:textColor="@color/biru_tua3"
+        android:textColor="@color/biru_tua2"
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
         android:layout_width="105dp"
         android:layout_height="82dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/login1"
+        android:src="@drawable/iconlogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +44,7 @@
         android:fontFamily="@font/poppins_medium"
         android:hint="Email"
         android:paddingLeft="15dp"
-        android:textColorHint="@color/biru_tua3"
+        android:textColorHint="@color/biru_tua2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextName" />
@@ -60,7 +60,7 @@
         android:fontFamily="@font/poppins_medium"
         android:hint="Username"
         android:paddingLeft="15dp"
-        android:textColorHint="@color/biru_tua3"
+        android:textColorHint="@color/biru_tua2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
@@ -75,8 +75,9 @@
         android:background="@drawable/custom"
         android:fontFamily="@font/poppins_medium"
         android:hint="Password"
+        android:inputType="textPassword"
         android:paddingLeft="15dp"
-        android:textColorHint="@color/biru_tua3"
+        android:textColorHint="@color/biru_tua2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
@@ -91,7 +92,7 @@
         android:fontFamily="@font/poppins_medium"
         android:hint="Nama"
         android:paddingLeft="15dp"
-        android:textColorHint="@color/biru_tua3"
+        android:textColorHint="@color/biru_tua2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -105,9 +106,10 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/custom"
         android:fontFamily="@font/poppins_medium"
+        android:inputType="textPassword"
         android:hint="Confirm password"
         android:paddingLeft="15dp"
-        android:textColorHint="@color/biru_tua3"
+        android:textColorHint="@color/biru_tua2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
@@ -190,7 +192,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
             android:text="Login"
-            android:textColor="@color/biru_tua3" />
+            android:textColor="@color/biru_tua2" />
 
     </LinearLayout>
 
